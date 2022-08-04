@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body{
+    background-color:  #e0e8ff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 0 24px;
+    height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+body::before{
+    content: '';
+    background-image: url(images/pattern-background-mobile.svg) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 194px;
+    z-index: -99;
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.img-container{
+    position: relative;
+    border-radius: inherit;
+}
+
+.img-container > img{
+    width: 100%;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+ 
+card-text{
+    padding: 32px;
+}
+
+.order-sum-title{
+    color: #7280a7;
+    font-weight: 900;
+    text-align: center;
+}
+
+/* .card-text{
+    color: #7280a7;
+    font-size: 15px;
+    font-weight: 900;
+    text-align: center;
+    padding: 16px 0 24px 0;
+} */
+
+.order-sum-paragraph{
+    color: #7280a7;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    padding: 16px 0 24px 0;
+
+}
+
+.order-sum-option{
+    display: flex;
+    background-color: #f5f7ff;
+    padding: 17px 16px 16px 16px;
+    border-radius: 11px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.order-sum-details{
+    color: #1f2f56;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.fees{
+    color: #7280a7;
+    font-weight: 900;
+    display: block;
+}
+
+.btn-change{
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+    color: #3829e0;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-size .3s;
+}
+
+.btn-change:hover{
+    background-image: linear-gradient(currentColor, currentColor);
+    color: #491e7a;
+    background-size: 0% 1px;
+}
+
+.btn{
+    border: 0;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: .5px;
+    padding: 15px 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.btn-proceed{
+    background-color: #3829e0;
+    box-shadow: 0 20px 20px #3829e030;
+    color: #fff;
+    margin-top: 24px;
+    position: relative;
+    top: 0;
+    transition: all .2s ease-in-out;
+}
+
+.btn-proceed:hover{
+    background-color: #756af1;
+}
+
+.btn-proceed:active{
+    box-shadow: none;
+    top: 5px;
+}
+
+.btn-cancel{
+    background-color: transparent;
+    color: #7280a7;
+    margin-top: 9px;
+    transition: color .3s ease-in-out;
+}
+
+.btn-cancel:hover{
+    color: #1f2f56;
+}
+
+.attribution{
+    padding-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a{
+    color: hsl(228, 45%, 44%);
+}
+
+
+/* DECKSTOP VIEW */
+
+
+@media screen and (min-width: 1024px) {
+    body{
+        justify-items: center;
+        align-items: center;
+    }
+
+    body::before{
+        content: '';
+        background-image: url(images/pattern-background-desktop.svg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 437px;
+        z-index: -99;
+    }
+
+    .card{
+        max-width: 450px;
+    }
+
+    .card-text{
+        padding: 0 48px;
+    }
+
+    .order-sum-paragraph{
+        font-size: 16px;
+    }
+    .order-sum-details{
+        justify-self: flex-start;
+        flex-grow: 1;
+        padding-left: 20px;
+    }
+}
+
+
+
+/* 
+### Primary
+
+- Pale blue: hsl(225, 100%, 94%)
+- Bright blue: hsl(245, 75%, 52%)
+
+### Neutral
+
+- Very pale blue: hsl(225, 100%, 98%)
+- Desaturated blue: hsl(224, 23%, 55%)
+- Dark blue: hsl(223, 47%, 23%)  */
